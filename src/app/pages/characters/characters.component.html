@@ -1,0 +1,16 @@
+<h1>Personajes de Rick und Morty</h1>
+<div class="container" id="characters">
+    @for (character of characters; track characters.id) {
+        <div class="card">
+            <img class="card-img-top" [src]="character.image" alt="image of {{character.name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{character.name}}</h5>
+                <p class="card-text">Status: {{character.status}}</p>
+                <p class="card-text">Especie: {{character.species}}</p>
+                <p class="card-text">Género: {{character.gender}}</p>
+                <p class="card-text">Origen: {{character.location.name}}</p>
+                <a href="#" class="btn btn-primary">Detalle</a>
+            </div>
+        </div>
+    }
+</div>
